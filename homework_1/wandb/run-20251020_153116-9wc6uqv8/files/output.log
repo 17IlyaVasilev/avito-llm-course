@@ -1,0 +1,38 @@
+Resolving data files: 100%|█████████████████████████████████████████████| 32/32 [00:00<00:00, 113455.39it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████| 46/46 [00:00<00:00, 10427.39it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+/workspace/llm/your_solution.py:291: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                              | 0/7579 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0] Graph break from `Tensor.item()`, consider setting:
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]     torch._dynamo.config.capture_scalar_outputs = True
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0] or:
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]     env TORCHDYNAMO_CAPTURE_SCALAR_OUTPUTS=1
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0] to include these operations in the captured graph.
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0] Graph break: from user code at:
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 446, in torch_dynamo_resume_in_forward_at_422
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]     causal_mask = self._update_causal_mask(
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 510, in _update_causal_mask
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]     if attention_mask is not None and 0.0 in attention_mask:
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]
+W1020 15:32:15.429000 3614 torch/_dynamo/variables/tensor.py:780] [3/0]
+  3%|██▎                                                              | 263/7579 [30:01<13:55:10,  6.85s/it]
+Training stopped after 1801.40 seconds
+{'train_runtime': 1801.4196, 'train_samples_per_second': 1076.963, 'train_steps_per_second': 4.207, 'train_loss': 6.635768179657795, 'epoch': 0.03}
+
+Training complete.
+
+=== Sample generation after training ===
+
+В древние времена, когда люди только начинали записывать историю, чтобы было до окончания его. Когда они к этимшему «соне, которое, что она стоит не только, что-либо это», «реч. Она, и я, хотя если любит я и я видел „Коло“» не смог образом: «Призон» () (как) — «Крупёмину», «Лёца» (Хильп
+
+=======================================
+
+Running final evaluation...
+100%|█████████████████████████████████████████████████████████████████████| 625/625 [00:43<00:00, 14.36it/s]
+Final evaluation results: {'eval_loss': 5.136333465576172, 'eval_runtime': 43.8634, 'eval_samples_per_second': 113.99, 'eval_steps_per_second': 14.249, 'epoch': 0.03470343735567725}

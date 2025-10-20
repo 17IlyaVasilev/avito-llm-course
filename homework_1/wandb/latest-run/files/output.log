@@ -1,0 +1,72 @@
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 95733.04it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 8885.42it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+/workspace/llm/your_solution.py:273: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/60627 [00:00<?, ?it/s]W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0] Graph break from `Tensor.item()`, consider setting:
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]     torch._dynamo.config.capture_scalar_outputs = True
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0] or:
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]     env TORCHDYNAMO_CAPTURE_SCALAR_OUTPUTS=1
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0] to include these operations in the captured graph.
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0] Graph break: from user code at:
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 969, in wrapper
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]     output = func(self, *args, **kwargs)
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 730, in forward
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]     outputs: BaseModelOutputWithPast = self.model(
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 969, in wrapper
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]     output = func(self, *args, **kwargs)
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 446, in forward
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]     causal_mask = self._update_causal_mask(
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 503, in _update_causal_mask
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]     is_padding_right = attention_mask[:, -1].sum().item() != input_tensor.size()[0]
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]
+W1020 20:05:03.009000 8587 torch/_dynamo/variables/tensor.py:780] [0/0]
+W1020 20:05:29.548000 8587 torch/_dynamo/convert_frame.py:861] [9/8] torch._dynamo hit config.cache_size_limit (8)
+W1020 20:05:29.548000 8587 torch/_dynamo/convert_frame.py:861] [9/8]    function: 'forward' (/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py:201)
+W1020 20:05:29.548000 8587 torch/_dynamo/convert_frame.py:861] [9/8]    last reason: 9/0: L['self'].layer_idx == 0
+W1020 20:05:29.548000 8587 torch/_dynamo/convert_frame.py:861] [9/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+W1020 20:05:29.548000 8587 torch/_dynamo/convert_frame.py:861] [9/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+  2%|███                                                                                                                                       | 1341/60627 [30:01<22:07:10,  1.34s/it]
+{'loss': 8.7766, 'grad_norm': 1.8828125, 'learning_rate': 0.00019800000000000002, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 625/625 [00:43<00:00, 14.31it/s]
+{'eval_loss': 7.684120178222656, 'eval_runtime': 44.4139, 'eval_samples_per_second': 112.577, 'eval_steps_per_second': 14.072, 'epoch': 0.0}
+{'loss': 6.7274, 'grad_norm': 1.078125, 'learning_rate': 0.000398, 'epoch': 0.0}
+{'eval_loss': 6.649459362030029, 'eval_runtime': 43.7882, 'eval_samples_per_second': 114.186, 'eval_steps_per_second': 14.273, 'epoch': 0.0}
+{'loss': 5.7055, 'grad_norm': 0.890625, 'learning_rate': 0.0003993446638092244, 'epoch': 0.0}
+{'eval_loss': 6.02510404586792, 'eval_runtime': 44.004, 'eval_samples_per_second': 113.626, 'eval_steps_per_second': 14.203, 'epoch': 0.0}
+{'loss': 5.2375, 'grad_norm': 0.7734375, 'learning_rate': 0.0003986827080609661, 'epoch': 0.01}
+{'eval_loss': 5.653780460357666, 'eval_runtime': 63.1416, 'eval_samples_per_second': 79.187, 'eval_steps_per_second': 9.898, 'epoch': 0.01}
+{'loss': 4.9272, 'grad_norm': 0.71484375, 'learning_rate': 0.0003980207523127079, 'epoch': 0.01}
+{'eval_loss': 5.397850036621094, 'eval_runtime': 43.9715, 'eval_samples_per_second': 113.71, 'eval_steps_per_second': 14.214, 'epoch': 0.01}
+{'loss': 4.7167, 'grad_norm': 0.625, 'learning_rate': 0.00039735879656444965, 'epoch': 0.01}
+{'eval_loss': 5.227916240692139, 'eval_runtime': 43.9446, 'eval_samples_per_second': 113.78, 'eval_steps_per_second': 14.222, 'epoch': 0.01}
+{'loss': 4.5474, 'grad_norm': 0.72265625, 'learning_rate': 0.00039669684081619145, 'epoch': 0.01}
+{'eval_loss': 5.084832668304443, 'eval_runtime': 43.9128, 'eval_samples_per_second': 113.862, 'eval_steps_per_second': 14.233, 'epoch': 0.01}
+{'loss': 4.401, 'grad_norm': 0.6640625, 'learning_rate': 0.00039603488506793325, 'epoch': 0.01}
+{'eval_loss': 4.951828956604004, 'eval_runtime': 43.9292, 'eval_samples_per_second': 113.82, 'eval_steps_per_second': 14.227, 'epoch': 0.01}
+{'loss': 4.268, 'grad_norm': 0.65234375, 'learning_rate': 0.000395372929319675, 'epoch': 0.01}
+{'eval_loss': 4.862586498260498, 'eval_runtime': 44.0414, 'eval_samples_per_second': 113.529, 'eval_steps_per_second': 14.191, 'epoch': 0.01}
+{'loss': 4.1753, 'grad_norm': 0.59765625, 'learning_rate': 0.0003947109735714168, 'epoch': 0.02}
+{'eval_loss': 4.770801544189453, 'eval_runtime': 44.0175, 'eval_samples_per_second': 113.591, 'eval_steps_per_second': 14.199, 'epoch': 0.02}
+{'loss': 4.0955, 'grad_norm': 0.65234375, 'learning_rate': 0.0003940490178231585, 'epoch': 0.02}
+{'eval_loss': 4.70190954208374, 'eval_runtime': 43.9214, 'eval_samples_per_second': 113.84, 'eval_steps_per_second': 14.23, 'epoch': 0.02}
+{'loss': 4.0105, 'grad_norm': 0.65234375, 'learning_rate': 0.0003933870620749003, 'epoch': 0.02}
+{'eval_loss': 4.638697624206543, 'eval_runtime': 43.8277, 'eval_samples_per_second': 114.083, 'eval_steps_per_second': 14.26, 'epoch': 0.02}
+{'loss': 3.9611, 'grad_norm': 0.58203125, 'learning_rate': 0.00039272510632664206, 'epoch': 0.02}
+{'eval_loss': 4.55035924911499, 'eval_runtime': 43.8686, 'eval_samples_per_second': 113.977, 'eval_steps_per_second': 14.247, 'epoch': 0.02}
+Training stopped after 1800.56 seconds
+{'train_runtime': 1801.1904, 'train_samples_per_second': 1077.1, 'train_steps_per_second': 33.659, 'train_loss': 5.007141158795908, 'epoch': 0.02}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 4.55035924911499, 'eval_runtime': 44.0472, 'eval_samples_per_second': 113.515, 'eval_steps_per_second': 14.189, 'epoch': 0.0221188579345836}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, но и не смогли.
+
+В 1722 году, после смерти, в 1720 году, после смерти, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 1720 году, в 17
+----------------------------------------------------------------------------------------------------
