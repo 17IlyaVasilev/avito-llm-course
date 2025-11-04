@@ -1,0 +1,27 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 109476.12it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 2616.78it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+Traceback (most recent call last):
+  File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 437, in <module>
+    train_model()
+  File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 410, in train_model
+    args = TrainingArguments(
+           ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 131, in __init__
+  File "/usr/local/lib/python3.12/dist-packages/transformers/training_args.py", line 1738, in __post_init__
+    self.device
+  File "/usr/local/lib/python3.12/dist-packages/transformers/training_args.py", line 2268, in device
+    return self._setup_devices
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 67, in __get__
+    cached = self.fget(obj)
+             ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/transformers/training_args.py", line 2195, in _setup_devices
+    self.distributed_state = PartialState(**accelerator_state_kwargs)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/accelerate/state.py", line 207, in __init__
+    raise ImportError(
+ImportError: DeepSpeed is not available => install it using `pip3 install deepspeed` or build it from source

@@ -1,0 +1,33 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 110923.74it/s]
+Downloading data: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 26656.95files/s]
+Generating train split: 1945063 examples [01:22, 23508.45 examples/s]
+Loading dataset shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 94.84it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+/workspace/llm/avito-llm-course/homework2/your_solution.py:293: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[2025-11-03 11:50:14,800] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 316, in <module>
+[rank0]:     train_model()
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 301, in train_model
+[rank0]:     trainer.train()
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 2240, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 2464, in _inner_training_loop
+[rank0]:     self.control = self.callback_handler.on_train_begin(args, self.state, self.control)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer_callback.py", line 506, in on_train_begin
+[rank0]:     return self.call_event("on_train_begin", args, state, control)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer_callback.py", line 556, in call_event
+[rank0]:     result = getattr(callback, event)(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 71, in on_train_begin
+[rank0]:     self.is_dist = dist.is_available() and dist.is_initialized()
+[rank0]:                    ^^^^
+[rank0]: NameError: name 'dist' is not defined. Did you mean: 'dict'?

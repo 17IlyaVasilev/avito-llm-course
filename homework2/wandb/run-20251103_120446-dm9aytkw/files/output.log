@@ -1,0 +1,61 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 105434.19it/s]
+Loading dataset shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 10157.84it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+/workspace/llm/avito-llm-course/homework2/your_solution.py:300: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[2025-11-03 12:05:39,542] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/30314 [00:00<?, ?it/s][rank0]:W1103 12:05:52.024000 2965 torch/_logging/_internal.py:1080] [0/0] Profiler function <class 'torch.autograd.profiler.record_function'> will be ignored
+[rank0]:W1103 12:05:52.206000 2965 torch/fx/experimental/symbolic_shapes.py:5858] [1/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 12:05:52.207000 2965 torch/fx/experimental/recording.py:298] [1/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 12:05:52.248000 2965 torch/fx/experimental/symbolic_shapes.py:5858] [2/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 12:05:52.249000 2965 torch/fx/experimental/recording.py:298] [2/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 12:05:52.291000 2965 torch/fx/experimental/symbolic_shapes.py:5858] [3/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 12:05:52.292000 2965 torch/fx/experimental/recording.py:298] [3/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 12:05:54.430000 2965 torch/fx/experimental/symbolic_shapes.py:5858] [4/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 12:05:54.432000 2965 torch/fx/experimental/recording.py:298] [4/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 12:05:55.995000 2965 torch/fx/experimental/symbolic_shapes.py:5858] [5/0] failed during evaluate_expr(Eq(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 12:05:55.996000 2965 torch/fx/experimental/recording.py:298] [5/0] failed while running evaluate_expr(*(Eq(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 12:06:19.561000 2965 torch/_dynamo/convert_frame.py:861] [11/8] torch._dynamo hit config.cache_size_limit (8)
+[rank0]:W1103 12:06:19.561000 2965 torch/_dynamo/convert_frame.py:861] [11/8]    function: 'forward' (/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py:201)
+[rank0]:W1103 12:06:19.561000 2965 torch/_dynamo/convert_frame.py:861] [11/8]    last reason: 11/0: L['self'].layer_idx == 0
+[rank0]:W1103 12:06:19.561000 2965 torch/_dynamo/convert_frame.py:861] [11/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank0]:W1103 12:06:19.561000 2965 torch/_dynamo/convert_frame.py:861] [11/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+  4%|█████▍                                                                                                                                    | 1201/30314 [30:49<12:27:14,  1.54s/it]
+{'loss': 8.6647, 'grad_norm': 1.4609375, 'learning_rate': 0.00019800000000000002, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:22<00:00, 14.02it/s]
+{'eval_loss': 7.444779872894287, 'eval_runtime': 23.5087, 'eval_samples_per_second': 212.687, 'eval_steps_per_second': 13.314, 'epoch': 0.0}
+{'loss': 6.2688, 'grad_norm': 0.97265625, 'learning_rate': 0.000398, 'epoch': 0.01}
+{'eval_loss': 6.207164764404297, 'eval_runtime': 22.7004, 'eval_samples_per_second': 220.26, 'eval_steps_per_second': 13.788, 'epoch': 0.01}
+{'loss': 5.2654, 'grad_norm': 0.6015625, 'learning_rate': 0.0003986849970113569, 'epoch': 0.01}
+{'eval_loss': 5.556196689605713, 'eval_runtime': 22.6766, 'eval_samples_per_second': 220.492, 'eval_steps_per_second': 13.803, 'epoch': 0.01}
+{'loss': 4.7444, 'grad_norm': 0.55859375, 'learning_rate': 0.0003973567111642426, 'epoch': 0.01}
+{'eval_loss': 5.18085241317749, 'eval_runtime': 22.6411, 'eval_samples_per_second': 220.838, 'eval_steps_per_second': 13.824, 'epoch': 0.01}
+{'loss': 4.4237, 'grad_norm': 0.57421875, 'learning_rate': 0.00039602842531712823, 'epoch': 0.02}
+{'eval_loss': 4.953657627105713, 'eval_runtime': 22.9001, 'eval_samples_per_second': 218.339, 'eval_steps_per_second': 13.668, 'epoch': 0.02}
+{'loss': 4.2121, 'grad_norm': 0.6328125, 'learning_rate': 0.000394700139470014, 'epoch': 0.02}
+{'eval_loss': 4.775331020355225, 'eval_runtime': 22.6562, 'eval_samples_per_second': 220.69, 'eval_steps_per_second': 13.815, 'epoch': 0.02}
+{'loss': 4.0494, 'grad_norm': 0.51953125, 'learning_rate': 0.0003933718536228997, 'epoch': 0.02}
+{'eval_loss': 4.6085357666015625, 'eval_runtime': 22.7066, 'eval_samples_per_second': 220.2, 'eval_steps_per_second': 13.785, 'epoch': 0.02}
+{'loss': 3.8933, 'grad_norm': 0.50390625, 'learning_rate': 0.00039204356777578533, 'epoch': 0.03}
+{'eval_loss': 4.4782633781433105, 'eval_runtime': 22.7059, 'eval_samples_per_second': 220.208, 'eval_steps_per_second': 13.785, 'epoch': 0.03}
+{'loss': 3.7382, 'grad_norm': 0.48828125, 'learning_rate': 0.0003907152819286711, 'epoch': 0.03}
+{'eval_loss': 4.333034992218018, 'eval_runtime': 22.6982, 'eval_samples_per_second': 220.282, 'eval_steps_per_second': 13.79, 'epoch': 0.03}
+{'loss': 3.6162, 'grad_norm': 0.470703125, 'learning_rate': 0.0003893869960815568, 'epoch': 0.03}
+{'eval_loss': 4.2363362312316895, 'eval_runtime': 22.6802, 'eval_samples_per_second': 220.456, 'eval_steps_per_second': 13.801, 'epoch': 0.03}
+{'loss': 3.4835, 'grad_norm': 0.447265625, 'learning_rate': 0.0003880587102344425, 'epoch': 0.04}
+{'eval_loss': 4.160270690917969, 'eval_runtime': 22.6312, 'eval_samples_per_second': 220.934, 'eval_steps_per_second': 13.83, 'epoch': 0.04}
+{'loss': 3.411, 'grad_norm': 0.435546875, 'learning_rate': 0.0003867304243873282, 'epoch': 0.04}
+{'eval_loss': 4.082319259643555, 'eval_runtime': 22.7111, 'eval_samples_per_second': 220.157, 'eval_steps_per_second': 13.782, 'epoch': 0.04}
+Training stopped after 1844.36s (timeout)
+{'train_runtime': 1849.5442, 'train_samples_per_second': 1048.941, 'train_steps_per_second': 16.39, 'train_loss': 4.646389919951198, 'epoch': 0.04}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 4.082319259643555, 'eval_runtime': 22.7031, 'eval_samples_per_second': 220.234, 'eval_steps_per_second': 13.787, 'epoch': 0.03961931152786712}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном в основном, в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном в основном
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,65 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 110832.15it/s]
+Loading dataset shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 10827.05it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+[2025-11-03 16:10:41,923] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-11-03 16:10:43,040] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-11-03 16:10:43,041] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/workspace/llm/avito-llm-course/homework2/your_solution.py:414: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using /root/.cache/torch_extensions/py312_cu126 as PyTorch extensions root...
+Loading extension module fused_adam...
+Time to load fused_adam op: 0.10313296318054199 seconds
+[2025-11-03 16:10:59,946] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/30314 [00:00<?, ?it/s][rank0]:W1103 16:11:01.146000 9346 torch/fx/experimental/symbolic_shapes.py:5858] [0/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 16:11:01.148000 9346 torch/fx/experimental/recording.py:298] [0/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 16:11:01.189000 9346 torch/fx/experimental/symbolic_shapes.py:5858] [1/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 16:11:01.191000 9346 torch/fx/experimental/recording.py:298] [1/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 16:11:01.245000 9346 torch/fx/experimental/symbolic_shapes.py:5858] [2/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 16:11:01.247000 9346 torch/fx/experimental/recording.py:298] [2/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 16:11:04.290000 9346 torch/fx/experimental/symbolic_shapes.py:5858] [3/0] failed during evaluate_expr(Ne(u0, 8), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 16:11:04.291000 9346 torch/fx/experimental/recording.py:298] [3/0] failed while running evaluate_expr(*(Ne(u0, 8), None), **{'fx_node': False})
+[rank0]:W1103 16:11:04.411000 9346 torch/fx/experimental/symbolic_shapes.py:5858] [4/0] failed during evaluate_expr(Eq(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 16:11:04.413000 9346 torch/fx/experimental/recording.py:298] [4/0] failed while running evaluate_expr(*(Eq(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 16:11:21.051000 9346 torch/_dynamo/convert_frame.py:861] [10/8] torch._dynamo hit config.cache_size_limit (8)
+[rank0]:W1103 16:11:21.051000 9346 torch/_dynamo/convert_frame.py:861] [10/8]    function: 'forward' (/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py:201)
+[rank0]:W1103 16:11:21.051000 9346 torch/_dynamo/convert_frame.py:861] [10/8]    last reason: 10/0: L['self'].layer_idx == 0
+[rank0]:W1103 16:11:21.051000 9346 torch/_dynamo/convert_frame.py:861] [10/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank0]:W1103 16:11:21.051000 9346 torch/_dynamo/convert_frame.py:861] [10/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 437, in <module>
+[rank0]:     train_model()
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 422, in train_model
+[rank0]:     trainer.train()
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 2240, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer.py", line 2621, in _inner_training_loop
+[rank0]:     self.control = self.callback_handler.on_step_end(args, self.state, self.control)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer_callback.py", line 534, in on_step_end
+[rank0]:     return self.call_event("on_step_end", args, state, control)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/trainer_callback.py", line 556, in call_event
+[rank0]:     result = getattr(callback, event)(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 92, in on_step_end
+[rank0]:     dist.broadcast_object_list(flag, src=0)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 3140, in broadcast_object_list
+[rank0]:     broadcast(object_sizes_tensor, src=src, group=group)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py", line 2428, in broadcast
+[rank0]:     work = default_pg.broadcast([tensor], opts)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:2828, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.23.4
+[rank0]: ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error.
+[rank0]: Last error:
+[rank0]: Error while creating shared memory segment /dev/shm/nccl-pBxXQC (size 9637888), error: No space left on device (28)

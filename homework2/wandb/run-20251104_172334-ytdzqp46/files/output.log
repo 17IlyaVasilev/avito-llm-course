@@ -1,0 +1,112 @@
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 61202.79it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 7110.82it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+/workspace/llm/avito-llm-course/homework2/your_solution.py:384: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[2025-11-04 17:24:13,703] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/usr/local/lib/python3.12/dist-packages/accelerate/accelerator.py:1731: UserWarning: Upcasted low precision parameters in Qwen3ForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/accelerate/accelerator.py:1731: UserWarning: Upcasted low precision parameters in Qwen3DecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, self_attn.q_norm.weight, self_attn.k_norm.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/accelerate/accelerator.py:1737: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  2%|███                                                                                                                                        | 677/30314 [30:00<21:53:24,  2.66s/it]
+{'loss': 8.727, 'grad_norm': 1.2667831182479858, 'learning_rate': 0.000392, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:57<00:00,  5.42it/s]
+{'eval_loss': 7.8503642082214355, 'eval_runtime': 58.325, 'eval_samples_per_second': 85.727, 'eval_steps_per_second': 5.366, 'epoch': 0.0}
+{'loss': 7.0072, 'grad_norm': 1.027797818183899, 'learning_rate': 0.0003993523658472112, 'epoch': 0.0}
+{'eval_loss': 6.81356954574585, 'eval_runtime': 58.2465, 'eval_samples_per_second': 85.842, 'eval_steps_per_second': 5.374, 'epoch': 0.0}
+{'loss': 5.9178, 'grad_norm': 0.6613454818725586, 'learning_rate': 0.00039869151467089613, 'epoch': 0.0}
+{'eval_loss': 6.207427024841309, 'eval_runtime': 58.237, 'eval_samples_per_second': 85.856, 'eval_steps_per_second': 5.375, 'epoch': 0.0}
+{'loss': 5.4318, 'grad_norm': 0.5581948757171631, 'learning_rate': 0.00039803066349458106, 'epoch': 0.01}
+{'eval_loss': 5.829047679901123, 'eval_runtime': 58.21, 'eval_samples_per_second': 85.896, 'eval_steps_per_second': 5.377, 'epoch': 0.01}
+{'loss': 5.1009, 'grad_norm': 0.5778723955154419, 'learning_rate': 0.00039736981231826594, 'epoch': 0.01}
+{'eval_loss': 5.559564113616943, 'eval_runtime': 58.2453, 'eval_samples_per_second': 85.844, 'eval_steps_per_second': 5.374, 'epoch': 0.01}
+{'loss': 4.8709, 'grad_norm': 0.5433039665222168, 'learning_rate': 0.00039670896114195087, 'epoch': 0.01}
+{'eval_loss': 5.358892917633057, 'eval_runtime': 58.2022, 'eval_samples_per_second': 85.907, 'eval_steps_per_second': 5.378, 'epoch': 0.01}
+{'loss': 4.6892, 'grad_norm': 0.5634517073631287, 'learning_rate': 0.00039604810996563575, 'epoch': 0.01}
+{'eval_loss': 5.204314708709717, 'eval_runtime': 58.2773, 'eval_samples_per_second': 85.797, 'eval_steps_per_second': 5.371, 'epoch': 0.01}
+{'loss': 4.5297, 'grad_norm': 0.5080670118331909, 'learning_rate': 0.0003953872587893207, 'epoch': 0.01}
+{'eval_loss': 5.071273326873779, 'eval_runtime': 58.227, 'eval_samples_per_second': 85.871, 'eval_steps_per_second': 5.376, 'epoch': 0.01}
+{'loss': 4.3939, 'grad_norm': 0.5018531680107117, 'learning_rate': 0.0003947264076130056, 'epoch': 0.01}
+{'eval_loss': 4.9728007316589355, 'eval_runtime': 58.1888, 'eval_samples_per_second': 85.927, 'eval_steps_per_second': 5.379, 'epoch': 0.01}
+{'loss': 4.2903, 'grad_norm': 0.47495025396347046, 'learning_rate': 0.0003940655564366905, 'epoch': 0.02}
+{'eval_loss': 4.886220932006836, 'eval_runtime': 58.2367, 'eval_samples_per_second': 85.856, 'eval_steps_per_second': 5.375, 'epoch': 0.02}
+{'loss': 4.2017, 'grad_norm': 0.44690701365470886, 'learning_rate': 0.00039340470526037536, 'epoch': 0.02}
+{'eval_loss': 4.79703426361084, 'eval_runtime': 58.2803, 'eval_samples_per_second': 85.792, 'eval_steps_per_second': 5.371, 'epoch': 0.02}
+{'loss': 4.1112, 'grad_norm': 0.49035853147506714, 'learning_rate': 0.0003927438540840603, 'epoch': 0.02}
+{'eval_loss': 4.72361946105957, 'eval_runtime': 58.2378, 'eval_samples_per_second': 85.855, 'eval_steps_per_second': 5.375, 'epoch': 0.02}
+{'loss': 4.0643, 'grad_norm': 0.42512863874435425, 'learning_rate': 0.00039208300290774516, 'epoch': 0.02}
+{'eval_loss': 4.630837440490723, 'eval_runtime': 58.2185, 'eval_samples_per_second': 85.883, 'eval_steps_per_second': 5.376, 'epoch': 0.02}
+Training stopped after 1800.12s (timeout)
+{'train_runtime': 1800.1326, 'train_samples_per_second': 1077.733, 'train_steps_per_second': 16.84, 'train_loss': 5.132257323497507, 'epoch': 0.02}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 4.603054046630859, 'eval_runtime': 58.1937, 'eval_samples_per_second': 85.92, 'eval_steps_per_second': 5.379, 'epoch': 0.022333283850429677}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 407, in <module>
+[rank0]:     train_model()
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 399, in train_model
+[rank0]:     generate(model, tokenizer, prompt)
+[rank0]:   File "/workspace/llm/avito-llm-course/homework2/your_solution.py", line 260, in generate
+[rank0]:     outputs = model.generate(
+[rank0]:               ^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/generation/utils.py", line 2597, in generate
+[rank0]:     result = self._sample(
+[rank0]:              ^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/generation/utils.py", line 3557, in _sample
+[rank0]:     outputs = self(**model_inputs, return_dict=True)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/accelerate/utils/operations.py", line 814, in forward
+[rank0]:     return model_forward(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/accelerate/utils/operations.py", line 802, in __call__
+[rank0]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 969, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 730, in forward
+[rank0]:     outputs: BaseModelOutputWithPast = self.model(
+[rank0]:                                        ^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/utils/generic.py", line 969, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 432, in forward
+[rank0]:     inputs_embeds = self.embed_tokens(input_ids)
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/sparse.py", line 190, in forward
+[rank0]:     return F.embedding(
+[rank0]:            ^^^^^^^^^^^^
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/torch/nn/functional.py", line 2551, in embedding
+[rank0]:     return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: RuntimeError: 'weight' must be 2-D

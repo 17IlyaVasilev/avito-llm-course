@@ -1,0 +1,53 @@
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 54671.17it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 8825.67it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+[2025-11-03 23:33:02,783] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-11-03 23:33:03,854] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-11-03 23:33:03,854] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/workspace/llm/avito-llm-course/homework2/your_solution.py:408: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using /root/.cache/torch_extensions/py312_cu126 as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /root/.cache/torch_extensions/py312_cu126/fused_adam/build.ninja...
+/usr/local/lib/python3.12/dist-packages/torch/utils/cpp_extension.py:2007: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation.
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Building extension module fused_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module fused_adam...
+Time to load fused_adam op: 0.058279991149902344 seconds
+[2025-11-03 23:33:26,346] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/30314 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+  2%|███▎                                                                                                                                       | 719/30314 [30:08<20:40:39,  2.52s/it]
+{'loss': 8.5567, 'grad_norm': 0.6497480869293213, 'learning_rate': 0.0026075279380565622, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:21<00:00, 14.34it/s]
+{'eval_loss': 7.448137283325195, 'eval_runtime': 22.4368, 'eval_samples_per_second': 222.848, 'eval_steps_per_second': 13.95, 'epoch': 0.0}
+{'loss': 6.6465, 'grad_norm': 0.3071441948413849, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 6.5724945068359375, 'eval_runtime': 22.264, 'eval_samples_per_second': 224.577, 'eval_steps_per_second': 14.059, 'epoch': 0.01}
+{'loss': 5.8664, 'grad_norm': 0.2031547874212265, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 6.066994667053223, 'eval_runtime': 22.4954, 'eval_samples_per_second': 222.268, 'eval_steps_per_second': 13.914, 'epoch': 0.01}
+{'loss': 5.3926, 'grad_norm': 0.18819908797740936, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 5.7650837898254395, 'eval_runtime': 22.2714, 'eval_samples_per_second': 224.503, 'eval_steps_per_second': 14.054, 'epoch': 0.01}
+{'loss': 5.0639, 'grad_norm': 0.16428381204605103, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.562548637390137, 'eval_runtime': 22.25, 'eval_samples_per_second': 224.719, 'eval_steps_per_second': 14.067, 'epoch': 0.02}
+{'loss': 4.8399, 'grad_norm': 0.19313138723373413, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.394897937774658, 'eval_runtime': 22.2864, 'eval_samples_per_second': 224.352, 'eval_steps_per_second': 14.044, 'epoch': 0.02}
+{'loss': 4.6725, 'grad_norm': 0.14473488926887512, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.230127334594727, 'eval_runtime': 22.3437, 'eval_samples_per_second': 223.777, 'eval_steps_per_second': 14.008, 'epoch': 0.02}
+Training stopped after 1800.57s (timeout)
+{'train_runtime': 1807.8972, 'train_samples_per_second': 1073.105, 'train_steps_per_second': 16.768, 'train_loss': 5.830434361485679, 'epoch': 0.02}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 5.230127334594727, 'eval_runtime': 22.2202, 'eval_samples_per_second': 225.02, 'eval_steps_per_second': 14.086, 'epoch': 0.0237188051528197}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, происходили..., в том числе в том числе в 1821 году, в 1821 году, в 1821 году, в 1821 году был назначен в 1821 году.
+
+В 1821 году был назначен профессором кафедры оркестрами, в 1821 году был назначен профессором кафедры оркестрами.
+
+В
+----------------------------------------------------------------------------------------------------

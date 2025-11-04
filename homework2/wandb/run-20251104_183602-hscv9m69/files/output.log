@@ -1,0 +1,51 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 110376.42it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 7682.79it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+[2025-11-04 18:36:41,473] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-11-04 18:36:42,568] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-11-04 18:36:42,568] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/workspace/llm/avito-llm-course/homework2/your_solution.py:379: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using /root/.cache/torch_extensions/py312_cu126 as PyTorch extensions root...
+Loading extension module fused_adam...
+Time to load fused_adam op: 0.10808420181274414 seconds
+[2025-11-04 18:37:10,142] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  3%|████▌                                                                                                                                     | 1004/30314 [30:00<14:35:55,  1.79s/it]
+{'loss': 7.7928, 'grad_norm': 0.8482136726379395, 'learning_rate': 0.00039999999999999996, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:22<00:00, 14.19it/s]
+{'eval_loss': 6.772077560424805, 'eval_runtime': 22.6501, 'eval_samples_per_second': 220.749, 'eval_steps_per_second': 13.819, 'epoch': 0.0}
+{'loss': 5.6868, 'grad_norm': 0.5870490074157715, 'learning_rate': 0.0004, 'epoch': 0.01}
+{'eval_loss': 5.840596675872803, 'eval_runtime': 22.3588, 'eval_samples_per_second': 223.625, 'eval_steps_per_second': 13.999, 'epoch': 0.01}
+{'loss': 4.9994, 'grad_norm': 0.5149286985397339, 'learning_rate': 0.0004, 'epoch': 0.01}
+{'eval_loss': 5.368886470794678, 'eval_runtime': 22.4017, 'eval_samples_per_second': 223.197, 'eval_steps_per_second': 13.972, 'epoch': 0.01}
+{'loss': 4.6196, 'grad_norm': 0.48812809586524963, 'learning_rate': 0.0004, 'epoch': 0.01}
+{'eval_loss': 5.087450981140137, 'eval_runtime': 22.3434, 'eval_samples_per_second': 223.78, 'eval_steps_per_second': 14.009, 'epoch': 0.01}
+{'loss': 4.3534, 'grad_norm': 0.4895778000354767, 'learning_rate': 0.0004, 'epoch': 0.02}
+{'eval_loss': 4.905457019805908, 'eval_runtime': 22.3473, 'eval_samples_per_second': 223.741, 'eval_steps_per_second': 14.006, 'epoch': 0.02}
+{'loss': 4.1753, 'grad_norm': 0.5076985359191895, 'learning_rate': 0.0004, 'epoch': 0.02}
+{'eval_loss': 4.752470970153809, 'eval_runtime': 22.3416, 'eval_samples_per_second': 223.797, 'eval_steps_per_second': 14.01, 'epoch': 0.02}
+{'loss': 4.0331, 'grad_norm': 0.4289417862892151, 'learning_rate': 0.0004, 'epoch': 0.02}
+{'eval_loss': 4.594754219055176, 'eval_runtime': 22.3111, 'eval_samples_per_second': 224.104, 'eval_steps_per_second': 14.029, 'epoch': 0.02}
+{'loss': 3.8982, 'grad_norm': 0.4234910309314728, 'learning_rate': 0.0004, 'epoch': 0.03}
+{'eval_loss': 4.485909461975098, 'eval_runtime': 22.3961, 'eval_samples_per_second': 223.253, 'eval_steps_per_second': 13.976, 'epoch': 0.03}
+{'loss': 3.7684, 'grad_norm': 0.42956212162971497, 'learning_rate': 0.0004, 'epoch': 0.03}
+{'eval_loss': 4.367151737213135, 'eval_runtime': 22.3573, 'eval_samples_per_second': 223.64, 'eval_steps_per_second': 14.0, 'epoch': 0.03}
+{'loss': 3.6615, 'grad_norm': 0.40228036046028137, 'learning_rate': 0.0004, 'epoch': 0.03}
+{'eval_loss': 4.274784564971924, 'eval_runtime': 22.3797, 'eval_samples_per_second': 223.417, 'eval_steps_per_second': 13.986, 'epoch': 0.03}
+Training stopped after 1800.26s (timeout)
+{'train_runtime': 1800.2672, 'train_samples_per_second': 1077.653, 'train_steps_per_second': 16.839, 'train_loss': 4.694274476799832, 'epoch': 0.03}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 4.264172554016113, 'eval_runtime': 22.3748, 'eval_samples_per_second': 223.466, 'eval_steps_per_second': 13.989, 'epoch': 0.03312055684760915}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, происходили... в результате вторжения в Москву.
+
+В 1650 году в ходе восстания в России в 1650 году в составе Российской империи, в 1650 году в составе Российской империи, в 1650 году в составе Российской империи.
+
+В 1650 году в составе Российской империи, в 1650 году в
+----------------------------------------------------------------------------------------------------

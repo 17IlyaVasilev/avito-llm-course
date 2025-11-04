@@ -1,0 +1,42 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 113840.31it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 8379.50it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+[2025-11-04 00:13:44,086] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-11-04 00:13:45,154] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-11-04 00:13:45,155] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/workspace/llm/avito-llm-course/homework2/your_solution.py:408: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using /root/.cache/torch_extensions/py312_cu126 as PyTorch extensions root...
+Loading extension module fused_adam...
+Time to load fused_adam op: 0.10286974906921387 seconds
+[2025-11-04 00:14:02,079] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/30314 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+  2%|███▎                                                                                                                                       | 713/30314 [30:08<20:51:38,  2.54s/it]
+{'loss': 8.5603, 'grad_norm': 0.6203190088272095, 'learning_rate': 0.0026075279380565622, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:22<00:00, 14.17it/s]
+{'eval_loss': 7.453709602355957, 'eval_runtime': 23.116, 'eval_samples_per_second': 216.3, 'eval_steps_per_second': 13.54, 'epoch': 0.0}
+{'loss': 6.6386, 'grad_norm': 0.31436264514923096, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 6.5491862297058105, 'eval_runtime': 22.5643, 'eval_samples_per_second': 221.589, 'eval_steps_per_second': 13.871, 'epoch': 0.01}
+{'loss': 5.8512, 'grad_norm': 0.19989608228206635, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 6.071843147277832, 'eval_runtime': 22.4267, 'eval_samples_per_second': 222.949, 'eval_steps_per_second': 13.957, 'epoch': 0.01}
+{'loss': 5.3936, 'grad_norm': 0.19223308563232422, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 5.7726545333862305, 'eval_runtime': 22.3078, 'eval_samples_per_second': 224.137, 'eval_steps_per_second': 14.031, 'epoch': 0.01}
+{'loss': 5.0709, 'grad_norm': 0.1581534743309021, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.561137676239014, 'eval_runtime': 22.3742, 'eval_samples_per_second': 223.471, 'eval_steps_per_second': 13.989, 'epoch': 0.02}
+{'loss': 4.8483, 'grad_norm': 0.1925392895936966, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.397764682769775, 'eval_runtime': 22.3408, 'eval_samples_per_second': 223.805, 'eval_steps_per_second': 14.01, 'epoch': 0.02}
+{'loss': 4.6818, 'grad_norm': 0.15121906995773315, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.242053031921387, 'eval_runtime': 22.6116, 'eval_samples_per_second': 221.125, 'eval_steps_per_second': 13.842, 'epoch': 0.02}
+Training stopped after 1800.91s (timeout)
+{'train_runtime': 1808.9032, 'train_samples_per_second': 1072.508, 'train_steps_per_second': 16.758, 'train_loss': 5.841042602881476, 'epoch': 0.02}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 5.242053031921387, 'eval_runtime': 22.4761, 'eval_samples_per_second': 222.458, 'eval_steps_per_second': 13.926, 'epoch': 0.023520873538192554}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, происходили..., и в частности, и в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности, в частности,
+----------------------------------------------------------------------------------------------------

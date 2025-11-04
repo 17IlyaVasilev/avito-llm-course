@@ -1,0 +1,43 @@
+{
+  "os": "Linux-6.5.0-0.deb12.4-amd64-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2025-11-04T13:00:55.269417Z",
+  "program": "/workspace/llm/avito-llm-course/homework2/your_solution.py",
+  "codePath": "avito-llm-course/homework2/your_solution.py",
+  "root": "/workspace/llm",
+  "host": "33455b73c496",
+  "executable": "/usr/bin/python3",
+  "codePathLocal": "avito-llm-course/homework2/your_solution.py",
+  "cpu_count": 32,
+  "cpu_count_logical": 64,
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "gpu_count": 2,
+  "disk": {
+    "/": {
+      "total": "9450102210560",
+      "used": "9366615322624"
+    }
+  },
+  "memory": {
+    "total": "1079692566528"
+  },
+  "cpu": {
+    "count": 32,
+    "countLogical": 64
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.3"
+}

@@ -1,0 +1,7 @@
+{"time":"2025-11-04T18:34:35.249032232Z","level":"INFO","msg":"stream: starting","core version":"0.19.10","symlink path":"/workspace/llm/wandb/run-20251104_183435-gw7cakxt/logs/debug-core.log"}
+{"time":"2025-11-04T18:34:36.199142074Z","level":"INFO","msg":"created new stream","id":"gw7cakxt"}
+{"time":"2025-11-04T18:34:36.199176478Z","level":"INFO","msg":"stream: started","id":"gw7cakxt"}
+{"time":"2025-11-04T18:34:36.199194475Z","level":"INFO","msg":"sender: started","stream_id":"gw7cakxt"}
+{"time":"2025-11-04T18:34:36.199210467Z","level":"INFO","msg":"writer: Do: started","stream_id":"gw7cakxt"}
+{"time":"2025-11-04T18:34:36.199216671Z","level":"INFO","msg":"handler: started","stream_id":"gw7cakxt"}
+{"time":"2025-11-04T18:34:36.579848718Z","level":"INFO","msg":"Starting system monitor"}

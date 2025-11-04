@@ -1,0 +1,58 @@
+Resolving data files: 100%|██████████████████████████████████████████████| 32/32 [00:00<00:00, 80418.05it/s]
+Loading dataset shards: 100%|█████████████████████████████████████████████| 46/46 [00:00<00:00, 6355.42it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+/workspace/llm/your_solution.py:293: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                             | 0/60627 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0] Graph break from `Tensor.item()`, consider setting:
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]     torch._dynamo.config.capture_scalar_outputs = True
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0] or:
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]     env TORCHDYNAMO_CAPTURE_SCALAR_OUTPUTS=1
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0] to include these operations in the captured graph.
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0] Graph break: from user code at:
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 446, in torch_dynamo_resume_in_forward_at_422
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]     causal_mask = self._update_causal_mask(
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]   File "/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py", line 510, in _update_causal_mask
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]     if attention_mask is not None and 0.0 in attention_mask:
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]
+W1020 14:38:33.558000 2098 torch/_dynamo/variables/tensor.py:780] [5/0]
+  2%|█▏                                                             | 1098/60627 [30:01<27:07:49,  1.64s/it]
+{'loss': 8.294, 'grad_norm': 1.6953125, 'learning_rate': 0.000495, 'epoch': 0.0}
+100%|█████████████████████████████████████████████████████████████████████| 625/625 [00:45<00:00, 13.82it/s]
+{'eval_loss': 7.319952964782715, 'eval_runtime': 45.3274, 'eval_samples_per_second': 110.309, 'eval_steps_per_second': 13.789, 'epoch': 0.0}
+{'loss': 6.3489, 'grad_norm': 0.79296875, 'learning_rate': 0.0004999966994912046, 'epoch': 0.0}
+{'eval_loss': 6.3844499588012695, 'eval_runtime': 45.0527, 'eval_samples_per_second': 110.981, 'eval_steps_per_second': 13.873, 'epoch': 0.0}
+{'loss': 5.4743, 'grad_norm': 0.77734375, 'learning_rate': 0.0004999866643633936, 'epoch': 0.0}
+{'eval_loss': 5.860890865325928, 'eval_runtime': 45.2104, 'eval_samples_per_second': 110.594, 'eval_steps_per_second': 13.824, 'epoch': 0.0}
+{'loss': 5.1139, 'grad_norm': 0.73828125, 'learning_rate': 0.000499969894550162, 'epoch': 0.01}
+{'eval_loss': 5.561591625213623, 'eval_runtime': 45.1098, 'eval_samples_per_second': 110.841, 'eval_steps_per_second': 13.855, 'epoch': 0.01}
+{'loss': 4.8584, 'grad_norm': 0.69921875, 'learning_rate': 0.0004999463905032915, 'epoch': 0.01}
+{'eval_loss': 5.33984375, 'eval_runtime': 45.0118, 'eval_samples_per_second': 111.082, 'eval_steps_per_second': 13.885, 'epoch': 0.01}
+{'loss': 4.675, 'grad_norm': 0.6015625, 'learning_rate': 0.0004999161528559856, 'epoch': 0.01}
+{'eval_loss': 5.194108486175537, 'eval_runtime': 45.1058, 'eval_samples_per_second': 110.851, 'eval_steps_per_second': 13.856, 'epoch': 0.01}
+{'loss': 4.5245, 'grad_norm': 0.6484375, 'learning_rate': 0.0004998791824228516, 'epoch': 0.01}
+{'eval_loss': 5.0621747970581055, 'eval_runtime': 45.1118, 'eval_samples_per_second': 110.836, 'eval_steps_per_second': 13.854, 'epoch': 0.01}
+{'loss': 4.3888, 'grad_norm': 0.6328125, 'learning_rate': 0.0004998354801998797, 'epoch': 0.01}
+{'eval_loss': 4.937143802642822, 'eval_runtime': 45.1611, 'eval_samples_per_second': 110.715, 'eval_steps_per_second': 13.839, 'epoch': 0.01}
+{'loss': 4.2641, 'grad_norm': 0.62890625, 'learning_rate': 0.0004997850473644157, 'epoch': 0.01}
+{'eval_loss': 4.8511834144592285, 'eval_runtime': 49.4441, 'eval_samples_per_second': 101.124, 'eval_steps_per_second': 12.641, 'epoch': 0.01}
+{'loss': 4.1778, 'grad_norm': 0.57421875, 'learning_rate': 0.0004997278852751291, 'epoch': 0.02}
+{'eval_loss': 4.774963855743408, 'eval_runtime': 45.2811, 'eval_samples_per_second': 110.421, 'eval_steps_per_second': 13.803, 'epoch': 0.02}
+Training stopped after 1800.86 seconds
+{'train_runtime': 1801.5096, 'train_samples_per_second': 1076.91, 'train_steps_per_second': 33.653, 'train_loss': 5.1133207171775386, 'epoch': 0.02}
+
+Training complete.
+
+=== Sample generation after training ===
+
+В древние времена, когда люди только начинали записывать историю, чтобы быть следствием о его тематике. В 1920-х годах на протяжении Первой мировой войны, в 1920-х годах (1928—1917) и его жены, будучи военным, как участник Великой Отечественной войны, а после этого времени пребывания в 1930-е годы, и в 1937-1941 годах был назначен директором ВГЭ (1937—1980), до 1939 года — начальник Ере
+
+=======================================
+
+Running final evaluation...
+Final evaluation results: {'eval_loss': 4.774963855743408, 'eval_runtime': 45.5798, 'eval_samples_per_second': 109.698, 'eval_steps_per_second': 13.712, 'epoch': 0.018110742738383888}

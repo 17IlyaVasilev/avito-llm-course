@@ -1,0 +1,37 @@
+{
+  "os": "Linux-6.5.0-0.deb12.4-amd64-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2025-10-20T20:04:10.381507Z",
+  "program": "/workspace/llm/your_solution.py",
+  "codePath": "your_solution.py",
+  "root": "/workspace/llm",
+  "host": "82a2916b0419",
+  "executable": "/usr/bin/python3",
+  "codePathLocal": "your_solution.py",
+  "cpu_count": 32,
+  "cpu_count_logical": 64,
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "9450102210560",
+      "used": "9296335450112"
+    }
+  },
+  "memory": {
+    "total": "1079692566528"
+  },
+  "cpu": {
+    "count": 32,
+    "countLogical": 64
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.3"
+}

@@ -1,0 +1,79 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 117528.66it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 8231.85it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+[2025-11-03 18:34:00,421] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-11-03 18:34:01,480] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-11-03 18:34:01,481] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/workspace/llm/avito-llm-course/homework2/your_solution.py:417: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using /root/.cache/torch_extensions/py312_cu126 as PyTorch extensions root...
+Loading extension module fused_adam...
+Time to load fused_adam op: 0.10452628135681152 seconds
+[2025-11-03 18:34:21,865] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/60627 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+[rank0]:W1103 18:34:23.663000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [3/0] failed during evaluate_expr(Eq(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 18:34:23.665000 10596 torch/fx/experimental/recording.py:298] [3/0] failed while running evaluate_expr(*(Eq(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 18:34:27.333000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [4/0] failed during evaluate_expr(Eq(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 18:34:27.334000 10596 torch/fx/experimental/recording.py:298] [4/0] failed while running evaluate_expr(*(Eq(u0, 1), None), **{'fx_node': False})
+  0%|▏                                                                                                                                          | 100/60627 [01:53<14:15:33,  1.18it/s][rank0]:W1103 18:36:16.962000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [1/1] failed during evaluate_expr(Ne(u0, 16), hint=None, size_oblivious=False, forcing_spec=False
+{'loss': 8.2931, 'grad_norm': 1.807213306427002, 'learning_rate': 0.0006999999999999999, 'epoch': 0.0}
+[rank0]:E1103 18:36:16.964000 10596 torch/fx/experimental/recording.py:298] [1/1] failed while running evaluate_expr(*(Ne(u0, 16), None), **{'fx_node': False})
+[rank0]:W1103 18:36:17.005000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [2/1] failed during evaluate_expr(Ne(u0, 16), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 18:36:17.007000 10596 torch/fx/experimental/recording.py:298] [2/1] failed while running evaluate_expr(*(Ne(u0, 16), None), **{'fx_node': False})
+[rank0]:W1103 18:36:17.206000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [4/1] failed during evaluate_expr(Ne(u0, 16), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 18:36:17.208000 10596 torch/fx/experimental/recording.py:298] [4/1] failed while running evaluate_expr(*(Ne(u0, 16), None), **{'fx_node': False})
+[rank0]:W1103 18:36:17.910000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [18/0] failed during evaluate_expr(Eq(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 18:36:17.911000 10596 torch/fx/experimental/recording.py:298] [18/0] failed while running evaluate_expr(*(Eq(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 18:36:27.712000 10596 torch/_dynamo/convert_frame.py:861] [21/8] torch._dynamo hit config.cache_size_limit (8)
+[rank0]:W1103 18:36:27.712000 10596 torch/_dynamo/convert_frame.py:861] [21/8]    function: 'forward' (/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3/modeling_qwen3.py:201)
+[rank0]:W1103 18:36:27.712000 10596 torch/_dynamo/convert_frame.py:861] [21/8]    last reason: 21/0: L['self'].layer_idx == 0
+[rank0]:W1103 18:36:27.712000 10596 torch/_dynamo/convert_frame.py:861] [21/8] To log all recompilation reasons, use TORCH_LOGS="recompiles".
+[rank0]:W1103 18:36:27.712000 10596 torch/_dynamo/convert_frame.py:861] [21/8] To diagnose recompilation issues, see https://pytorch.org/docs/main/torch.compiler_troubleshooting.html.
+  1%|██                                                                                                                                         | 901/60627 [30:14<33:24:08,  2.01s/it]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 157/157 [00:13<00:00, 11.81it/s]
+{'eval_loss': 7.434617042541504, 'eval_runtime': 41.6668, 'eval_samples_per_second': 120.0, 'eval_steps_per_second': 3.768, 'epoch': 0.0}
+{'loss': 6.4705, 'grad_norm': 0.6866157054901123, 'learning_rate': 0.0007, 'epoch': 0.0}
+{'eval_loss': 6.437150955200195, 'eval_runtime': 13.9782, 'eval_samples_per_second': 357.701, 'eval_steps_per_second': 11.232, 'epoch': 0.0}
+{'loss': 5.5694, 'grad_norm': 0.721988320350647, 'learning_rate': 0.0007, 'epoch': 0.0}
+{'eval_loss': 5.949238300323486, 'eval_runtime': 14.0562, 'eval_samples_per_second': 355.716, 'eval_steps_per_second': 11.169, 'epoch': 0.0}
+{'loss': 5.2058, 'grad_norm': 0.549084484577179, 'learning_rate': 0.0007, 'epoch': 0.01}
+{'eval_loss': 5.640124320983887, 'eval_runtime': 13.9775, 'eval_samples_per_second': 357.717, 'eval_steps_per_second': 11.232, 'epoch': 0.01}
+{'loss': 4.9383, 'grad_norm': 0.549648106098175, 'learning_rate': 0.0007, 'epoch': 0.01}
+{'eval_loss': 5.411190032958984, 'eval_runtime': 14.0587, 'eval_samples_per_second': 355.652, 'eval_steps_per_second': 11.167, 'epoch': 0.01}
+{'loss': 4.7449, 'grad_norm': 0.46278923749923706, 'learning_rate': 0.0007, 'epoch': 0.01}
+{'eval_loss': 5.266071796417236, 'eval_runtime': 14.0854, 'eval_samples_per_second': 354.977, 'eval_steps_per_second': 11.146, 'epoch': 0.01}
+{'loss': 4.5894, 'grad_norm': 0.5163382291793823, 'learning_rate': 0.0007, 'epoch': 0.01}
+{'eval_loss': 5.133451461791992, 'eval_runtime': 14.009, 'eval_samples_per_second': 356.914, 'eval_steps_per_second': 11.207, 'epoch': 0.01}
+{'loss': 4.4481, 'grad_norm': 0.4408622086048126, 'learning_rate': 0.0007, 'epoch': 0.01}
+{'eval_loss': 4.994845390319824, 'eval_runtime': 13.9981, 'eval_samples_per_second': 357.19, 'eval_steps_per_second': 11.216, 'epoch': 0.01}
+{'loss': 4.3188, 'grad_norm': 0.4313843548297882, 'learning_rate': 0.0007, 'epoch': 0.01}
+{'eval_loss': 4.905699729919434, 'eval_runtime': 14.0932, 'eval_samples_per_second': 354.781, 'eval_steps_per_second': 11.14, 'epoch': 0.01}
+Training stopped after 1805.51s (timeout)
+{'train_runtime': 1814.0197, 'train_samples_per_second': 1069.483, 'train_steps_per_second': 33.421, 'train_loss': 5.396053343316691, 'epoch': 0.01}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 4.905699729919434, 'eval_runtime': 14.0465, 'eval_samples_per_second': 355.96, 'eval_steps_per_second': 11.177, 'epoch': 0.014861365398254903}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[rank0]:W1103 19:04:50.790000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [1/2] failed during evaluate_expr(Ne(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 19:04:50.792000 10596 torch/fx/experimental/recording.py:298] [1/2] failed while running evaluate_expr(*(Ne(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 19:04:50.839000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [2/2] failed during evaluate_expr(Ne(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 19:04:50.840000 10596 torch/fx/experimental/recording.py:298] [2/2] failed while running evaluate_expr(*(Ne(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 19:04:52.497000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [4/2] failed during evaluate_expr(Ne(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 19:04:52.498000 10596 torch/fx/experimental/recording.py:298] [4/2] failed while running evaluate_expr(*(Ne(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 19:04:52.585000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [18/1] failed during evaluate_expr(Eq(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 19:04:52.586000 10596 torch/fx/experimental/recording.py:298] [18/1] failed while running evaluate_expr(*(Eq(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 19:04:56.691000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [1/3] failed during evaluate_expr(Ne(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 19:04:56.693000 10596 torch/fx/experimental/recording.py:298] [1/3] failed while running evaluate_expr(*(Ne(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 19:04:56.731000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [2/3] failed during evaluate_expr(Ne(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 19:04:56.732000 10596 torch/fx/experimental/recording.py:298] [2/3] failed while running evaluate_expr(*(Ne(u0, 1), None), **{'fx_node': False})
+[rank0]:W1103 19:04:58.033000 10596 torch/fx/experimental/symbolic_shapes.py:5858] [4/3] failed during evaluate_expr(Ne(u0, 1), hint=None, size_oblivious=False, forcing_spec=False
+[rank0]:E1103 19:04:58.034000 10596 torch/fx/experimental/recording.py:298] [4/3] failed while running evaluate_expr(*(Ne(u0, 1), None), **{'fx_node': False})
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, но и в основном, и в основном, и в основном, и в других местах, и в некоторых местах, в том числе и в других местах.
+
+В настоящее время в основном в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном, в основном,
+----------------------------------------------------------------------------------------------------

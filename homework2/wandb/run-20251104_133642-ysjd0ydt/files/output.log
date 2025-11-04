@@ -1,0 +1,57 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 107632.50it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 9901.36it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+[2025-11-04 13:37:35,362] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-11-04 13:37:36,424] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-11-04 13:37:36,425] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/workspace/llm/avito-llm-course/homework2/your_solution.py:408: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using /root/.cache/torch_extensions/py312_cu126 as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /root/.cache/torch_extensions/py312_cu126/fused_adam/build.ninja...
+/usr/local/lib/python3.12/dist-packages/torch/utils/cpp_extension.py:2007: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation.
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+Building extension module fused_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module fused_adam...
+Time to load fused_adam op: 0.05724143981933594 seconds
+[2025-11-04 13:37:49,791] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/15157 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+  3%|████▌                                                                                                                                      | 501/15157 [30:26<14:50:35,  3.65s/it]
+{'loss': 8.6756, 'grad_norm': 1.2586987018585205, 'learning_rate': 0.0003397940008672037, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:21<00:00, 14.28it/s]
+{'eval_loss': 7.698620319366455, 'eval_runtime': 23.2606, 'eval_samples_per_second': 214.956, 'eval_steps_per_second': 13.456, 'epoch': 0.0}
+{'loss': 6.7569, 'grad_norm': 0.7760111689567566, 'learning_rate': 0.00039999999999999996, 'epoch': 0.01}
+{'eval_loss': 6.562112331390381, 'eval_runtime': 22.5879, 'eval_samples_per_second': 221.358, 'eval_steps_per_second': 13.857, 'epoch': 0.01}
+{'loss': 5.6578, 'grad_norm': 0.5694890022277832, 'learning_rate': 0.0004, 'epoch': 0.01}
+{'eval_loss': 5.873955249786377, 'eval_runtime': 22.6291, 'eval_samples_per_second': 220.955, 'eval_steps_per_second': 13.832, 'epoch': 0.01}
+{'loss': 5.0698, 'grad_norm': 0.47072550654411316, 'learning_rate': 0.0004, 'epoch': 0.01}
+{'eval_loss': 5.45389986038208, 'eval_runtime': 22.5433, 'eval_samples_per_second': 221.795, 'eval_steps_per_second': 13.884, 'epoch': 0.01}
+{'loss': 4.6869, 'grad_norm': 0.4429418742656708, 'learning_rate': 0.0004, 'epoch': 0.02}
+{'eval_loss': 5.203041076660156, 'eval_runtime': 22.5945, 'eval_samples_per_second': 221.293, 'eval_steps_per_second': 13.853, 'epoch': 0.02}
+{'loss': 4.4444, 'grad_norm': 0.46778517961502075, 'learning_rate': 0.0004, 'epoch': 0.02}
+{'eval_loss': 5.000810146331787, 'eval_runtime': 22.9656, 'eval_samples_per_second': 217.717, 'eval_steps_per_second': 13.629, 'epoch': 0.02}
+{'loss': 4.2624, 'grad_norm': 0.3896223306655884, 'learning_rate': 0.0004, 'epoch': 0.02}
+{'eval_loss': 4.804121494293213, 'eval_runtime': 22.576, 'eval_samples_per_second': 221.474, 'eval_steps_per_second': 13.864, 'epoch': 0.02}
+{'loss': 4.1049, 'grad_norm': 0.42788296937942505, 'learning_rate': 0.0004, 'epoch': 0.03}
+{'eval_loss': 4.695246696472168, 'eval_runtime': 22.6474, 'eval_samples_per_second': 220.775, 'eval_steps_per_second': 13.821, 'epoch': 0.03}
+{'loss': 3.9781, 'grad_norm': 0.37691178917884827, 'learning_rate': 0.0004, 'epoch': 0.03}
+{'eval_loss': 4.56031608581543, 'eval_runtime': 22.6454, 'eval_samples_per_second': 220.795, 'eval_steps_per_second': 13.822, 'epoch': 0.03}
+{'loss': 3.8788, 'grad_norm': 0.3626183569431305, 'learning_rate': 0.0004, 'epoch': 0.03}
+{'eval_loss': 4.4781999588012695, 'eval_runtime': 22.6391, 'eval_samples_per_second': 220.857, 'eval_steps_per_second': 13.826, 'epoch': 0.03}
+Training stopped after 1818.97s (timeout)
+{'train_runtime': 1826.6347, 'train_samples_per_second': 1062.097, 'train_steps_per_second': 8.298, 'train_loss': 5.149107736027883, 'epoch': 0.03}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 4.4781999588012695, 'eval_runtime': 22.6103, 'eval_samples_per_second': 221.138, 'eval_steps_per_second': 13.843, 'epoch': 0.03305403443953289}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, происходили..., которые были убиты.
+
+В конце XIX века в деревне была построена церковь, которая была построена в 1857 году. В 1857 году была освящена церковь, освящена в честь святого великомученика. В 1857 году церковь была освящена. В 1857 году церковь была освящ
+----------------------------------------------------------------------------------------------------

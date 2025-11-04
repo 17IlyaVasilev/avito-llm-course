@@ -1,0 +1,105 @@
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 112598.77it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 8290.92it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+/workspace/llm/avito-llm-course/homework2/your_solution.py:379: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[2025-11-04 19:12:06,208] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  5%|██████▊                                                                                                                                    | 1488/30314 [30:00<9:41:22,  1.21s/it]
+{'loss': 8.2385, 'grad_norm': 1.3046875, 'learning_rate': 0.00039600000000000003, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:22<00:00, 14.07it/s]
+{'eval_loss': 7.057769298553467, 'eval_runtime': 22.6372, 'eval_samples_per_second': 220.875, 'eval_steps_per_second': 13.827, 'epoch': 0.0}
+{'loss': 5.8465, 'grad_norm': 0.65625, 'learning_rate': 0.00039868934930826767, 'epoch': 0.01}
+{'eval_loss': 5.917838096618652, 'eval_runtime': 22.5827, 'eval_samples_per_second': 221.408, 'eval_steps_per_second': 13.86, 'epoch': 0.01}
+{'loss': 5.0467, 'grad_norm': 0.59765625, 'learning_rate': 0.00039736545972065933, 'epoch': 0.01}
+{'eval_loss': 5.409733295440674, 'eval_runtime': 22.6049, 'eval_samples_per_second': 221.191, 'eval_steps_per_second': 13.847, 'epoch': 0.01}
+{'loss': 4.6342, 'grad_norm': 0.5625, 'learning_rate': 0.00039604157013305093, 'epoch': 0.01}
+{'eval_loss': 5.094327926635742, 'eval_runtime': 22.6471, 'eval_samples_per_second': 220.779, 'eval_steps_per_second': 13.821, 'epoch': 0.01}
+{'loss': 4.3556, 'grad_norm': 0.55859375, 'learning_rate': 0.00039471768054544253, 'epoch': 0.02}
+{'eval_loss': 4.8954010009765625, 'eval_runtime': 22.6116, 'eval_samples_per_second': 221.125, 'eval_steps_per_second': 13.842, 'epoch': 0.02}
+{'loss': 4.1657, 'grad_norm': 0.5390625, 'learning_rate': 0.00039339379095783413, 'epoch': 0.02}
+{'eval_loss': 4.726958274841309, 'eval_runtime': 22.758, 'eval_samples_per_second': 219.703, 'eval_steps_per_second': 13.753, 'epoch': 0.02}
+{'loss': 4.0151, 'grad_norm': 0.482421875, 'learning_rate': 0.00039206990137022574, 'epoch': 0.02}
+{'eval_loss': 4.571445941925049, 'eval_runtime': 22.6582, 'eval_samples_per_second': 220.67, 'eval_steps_per_second': 13.814, 'epoch': 0.02}
+{'loss': 3.8786, 'grad_norm': 0.4921875, 'learning_rate': 0.00039074601178261734, 'epoch': 0.03}
+{'eval_loss': 4.4637579917907715, 'eval_runtime': 22.7595, 'eval_samples_per_second': 219.688, 'eval_steps_per_second': 13.752, 'epoch': 0.03}
+{'loss': 3.7348, 'grad_norm': 0.5, 'learning_rate': 0.00038942212219500894, 'epoch': 0.03}
+{'eval_loss': 4.334863185882568, 'eval_runtime': 22.7216, 'eval_samples_per_second': 220.055, 'eval_steps_per_second': 13.775, 'epoch': 0.03}
+{'loss': 3.6198, 'grad_norm': 0.46484375, 'learning_rate': 0.0003880982326074006, 'epoch': 0.03}
+{'eval_loss': 4.229501724243164, 'eval_runtime': 22.6185, 'eval_samples_per_second': 221.058, 'eval_steps_per_second': 13.838, 'epoch': 0.03}
+{'loss': 3.4861, 'grad_norm': 0.4375, 'learning_rate': 0.0003867743430197922, 'epoch': 0.04}
+{'eval_loss': 4.162093639373779, 'eval_runtime': 22.6158, 'eval_samples_per_second': 221.084, 'eval_steps_per_second': 13.84, 'epoch': 0.04}
+{'loss': 3.4111, 'grad_norm': 0.421875, 'learning_rate': 0.00038545045343218375, 'epoch': 0.04}
+{'eval_loss': 4.083851337432861, 'eval_runtime': 23.1228, 'eval_samples_per_second': 216.237, 'eval_steps_per_second': 13.536, 'epoch': 0.04}
+{'loss': 3.3627, 'grad_norm': 0.45703125, 'learning_rate': 0.00038412656384457535, 'epoch': 0.04}
+{'eval_loss': 4.001049518585205, 'eval_runtime': 22.6447, 'eval_samples_per_second': 220.802, 'eval_steps_per_second': 13.822, 'epoch': 0.04}
+{'loss': 3.3065, 'grad_norm': 0.51171875, 'learning_rate': 0.000382802674256967, 'epoch': 0.05}
+{'eval_loss': 3.9522297382354736, 'eval_runtime': 22.5965, 'eval_samples_per_second': 221.273, 'eval_steps_per_second': 13.852, 'epoch': 0.05}
+Training stopped after 1800.65s (timeout)
+{'train_runtime': 1800.8405, 'train_samples_per_second': 1077.31, 'train_steps_per_second': 16.833, 'train_loss': 4.2991531536143315, 'epoch': 0.05}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 3.9201765060424805, 'eval_runtime': 22.5747, 'eval_samples_per_second': 221.487, 'eval_steps_per_second': 13.865, 'epoch': 0.049087040427532286}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, происходили...
+
+Виды
+
+Виды
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------

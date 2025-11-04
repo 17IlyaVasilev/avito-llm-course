@@ -1,0 +1,42 @@
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00<00:00, 89478.49it/s]
+Loading dataset shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 46/46 [00:00<00:00, 9080.72it/s]
+Training samples: 1940063
+Validation samples: 5000
+Model pad token id: 0
+Total params: 960,881,664
+[2025-11-03 22:59:42,102] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-11-03 22:59:43,140] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-11-03 22:59:43,140] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+/workspace/llm/avito-llm-course/homework2/your_solution.py:408: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using /root/.cache/torch_extensions/py312_cu126 as PyTorch extensions root...
+Loading extension module fused_adam...
+Time to load fused_adam op: 0.10390639305114746 seconds
+[2025-11-03 23:00:01,033] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                        | 0/30314 [00:00<?, ?it/s]`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+  2%|███▏                                                                                                                                       | 701/30314 [30:25<21:24:55,  2.60s/it]
+{'loss': 8.5626, 'grad_norm': 0.6850693821907043, 'learning_rate': 0.0026075279380565622, 'epoch': 0.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 313/313 [00:21<00:00, 14.34it/s]
+{'eval_loss': 7.471745491027832, 'eval_runtime': 22.8183, 'eval_samples_per_second': 219.123, 'eval_steps_per_second': 13.717, 'epoch': 0.0}
+{'loss': 6.6413, 'grad_norm': 0.3097465932369232, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 6.557561874389648, 'eval_runtime': 22.2548, 'eval_samples_per_second': 224.67, 'eval_steps_per_second': 14.064, 'epoch': 0.01}
+{'loss': 5.8593, 'grad_norm': 0.21590659022331238, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 6.077840805053711, 'eval_runtime': 22.3395, 'eval_samples_per_second': 223.819, 'eval_steps_per_second': 14.011, 'epoch': 0.01}
+{'loss': 5.3938, 'grad_norm': 0.1745615452528, 'learning_rate': 0.003, 'epoch': 0.01}
+{'eval_loss': 5.774192810058594, 'eval_runtime': 22.3195, 'eval_samples_per_second': 224.019, 'eval_steps_per_second': 14.024, 'epoch': 0.01}
+{'loss': 5.0692, 'grad_norm': 0.1541542112827301, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.578333377838135, 'eval_runtime': 22.3877, 'eval_samples_per_second': 223.337, 'eval_steps_per_second': 13.981, 'epoch': 0.02}
+{'loss': 4.8473, 'grad_norm': 0.1750102937221527, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.404010772705078, 'eval_runtime': 22.3459, 'eval_samples_per_second': 223.755, 'eval_steps_per_second': 14.007, 'epoch': 0.02}
+{'loss': 4.6813, 'grad_norm': 0.1580955684185028, 'learning_rate': 0.003, 'epoch': 0.02}
+{'eval_loss': 5.236621856689453, 'eval_runtime': 22.3714, 'eval_samples_per_second': 223.499, 'eval_steps_per_second': 13.991, 'epoch': 0.02}
+Training stopped after 1817.13s (timeout)
+{'train_runtime': 1825.0204, 'train_samples_per_second': 1063.036, 'train_steps_per_second': 16.61, 'train_loss': 5.862699881429849, 'epoch': 0.02}
+Running final evaluation...
+Final evaluation results: {'eval_loss': 5.236621856689453, 'eval_runtime': 22.2541, 'eval_samples_per_second': 224.677, 'eval_steps_per_second': 14.065, 'epoch': 0.023125010308938262}
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+----------------------------------------------------------------------------------------------------
+В древние времена, когда люди только начинали записывать историю, происходили..., что в этом случае, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что, что,
+----------------------------------------------------------------------------------------------------
